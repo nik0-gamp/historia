@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Historias</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <h1>Mis Historias</h1>
+
+        <div class="historias" id="historias">
+
+            <div class="historia agregar" id="agregar">
+                <div class="circulo">
+                    <span>+</span>
+                </div>
+                <p>Agregar</p>
+            </div>
+
+        </div>
+
+        <p class="texto">Comparte tus mejores momentos</p>
+
+    </div>
+
+    <!-- Ventana para ver historias -->
+    <div class="visor" id="visor">
+
+        <div class="contenidoVisor">
+
+            <div class="barra">
+                <div id="progreso"></div>
+            </div>
+
+            <button class="cerrar" id="cerrar">X</button>
+
+            <img src="" id="imagenHistoria">
+
+        </div>
+
+    </div>
+
+    <!-- Seleccionar imagen -->
+    <input type="file" id="archivo" accept="image/*" hidden>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

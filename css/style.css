@@ -1,0 +1,153 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: rgb(52, 52, 77);
+    min-height: 100vh;
+    color: white;
+    padding: 30px;
+}
+
+.contenedor {
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.historias {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.historia {
+    text-align: center;
+    cursor: pointer;
+    width: 90px;
+}
+
+.circulo {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(45deg, #cf1d5e, #5f5cf6, #ff0000);
+    margin: auto auto 8px;
+}
+
+.circulo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #111827;
+}
+
+.agregar .circulo {
+    background: #252A45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #8fa2ff;
+}
+
+.agregar .circulo span {
+    font-size: 40px;
+    color: #8fa2ff;
+}
+
+.historia p {
+    font-size: 13px;
+}
+
+.texto {
+    text-align: center;
+    color: #aaa;
+    margin-top: 60px;
+}
+
+/* Visor de historias */
+
+.visor {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.contenidoVisor {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: 90vh;
+    max-height: 750px;
+    background: #111;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.contenidoVisor img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.barra {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    right: 10px;
+    height: 4px;
+    background: #777;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.barra div {
+    width: 0%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    z-index: 3;
+    background: transparent;
+    color: white;
+    font-size: 25px;
+    padding: 5px 10px;
+}
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 25px 10px;
+    }
+
+    .historias {
+        justify-content: flex-start;
+    }
+
+    .contenidoVisor {
+        height: 100vh;
+        max-height: none;
+        border-radius: 0;
+    }
+
+}
